@@ -1,25 +1,495 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Yukta weds Nikhil — April 2026</title>
-    
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=IM+Fell+English:ital@0;1&family=Raleway:wght@300;400;500&display=swap" rel="stylesheet">
-    
-    <!-- Custom Styles -->
-    <link rel="stylesheet" href="css/style.css">
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Yukta weds Nikhil — April 2026</title>
+
+<!-- Open Graph -->
+<meta property="og:title"       content="Yukta weds Nikhil 🪔 — April 2026"/>
+<meta property="og:description" content="Join us to celebrate the wedding of Yukta & Nikhil — 29 April 2026. Five beautiful ceremonies await!"/>
+<meta property="og:type"        content="website"/>
+<meta property="og:image"       content="https://placehold.co/1200x630/6B1520/D4A84B?text=Yukta+weds+Nikhil+2026"/>
+<meta name="theme-color"        content="#6B1520"/>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=IM+Fell+English:ital@0;1&family=Raleway:wght@300;400;500&display=swap" rel="stylesheet">
+
+<!-- QRCode.js loaded in <head> so it's ready before body scripts run -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+
+<style>
+*, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+
+:root {
+  --ink:    #1C0A04;
+  --maroon: #6B1520;
+  --gold:   #B8862A;
+  --gold2:  #D4A84B;
+  --cream:  #FBF4E8;
+  --warm:   #F5EAD5;
+  --blush:  #EDD5B8;
+  --muted:  #96644A;
+}
+
+body { background:var(--cream); color:var(--ink); font-family:'Cormorant Garamond',serif; overflow-x:hidden; }
+
+/* noise overlay — pointer-events none, above everything visual but below UI */
+body::after {
+  content:''; position:fixed; inset:0;
+  background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+  pointer-events:none; z-index:9990; opacity:.35;
+}
+
+/* ── PROGRESS BAR ── */
+#progress-bar {
+  position:fixed; top:0; left:0; height:2px; width:0%;
+  background:linear-gradient(90deg,var(--gold),#E07B39,var(--gold));
+  z-index:10000; transition:width .12s linear;
+  box-shadow:0 0 8px rgba(184,134,42,.7);
+  pointer-events:none;
+}
+
+/* ── PETALS ── */
+#petals { position:fixed; inset:0; pointer-events:none; z-index:9980; overflow:hidden; }
+.p { position:absolute; top:-40px; animation:fall linear infinite; opacity:0; }
+@keyframes fall {
+  0%   { opacity:0;   transform:translateY(0)      rotate(0deg)   translateX(0); }
+  6%   { opacity:.65; }
+  94%  { opacity:.18; }
+  100% { opacity:0;   transform:translateY(108vh)  rotate(420deg) translateX(55px); }
+}
+
+/* ── FIREFLIES ── */
+#fireflies { position:fixed; inset:0; pointer-events:none; z-index:9970; overflow:hidden; }
+.ff {
+  position:absolute; width:3px; height:3px; border-radius:50%;
+  background:var(--gold2); animation:ffade ease-in-out infinite;
+  box-shadow:0 0 4px 2px rgba(212,168,75,.5);
+}
+@keyframes ffade {
+  0%,100% { opacity:0; transform:translate(0,0); }
+  25%     { opacity:.85; }
+  50%     { opacity:.4;  transform:translate(var(--dx,20px),var(--dy,-20px)); }
+  75%     { opacity:.7; }
+}
+
+/* ══════════════ HERO ══════════════ */
+.hero {
+  min-height:100vh;
+  display:flex; align-items:center; justify-content:center; flex-direction:column;
+  text-align:center; position:relative; overflow:hidden; padding:80px 24px;
+  background:#4A0D16;
+}
+.hero::before {
+  content:''; position:absolute; inset:0;
+  background:
+    radial-gradient(ellipse 80% 70% at 50% 45%, #8B1F30 0%, transparent 68%),
+    linear-gradient(170deg,#3D0810 0%,#6B1520 45%,#3A0A10 100%);
+  z-index:0;
+}
+.hero::after {
+  content:''; position:absolute; inset:0; z-index:0;
+  background:url("data:image/svg+xml,%3Csvg width='52' height='52' viewBox='0 0 52 52' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23C9943A' fill-opacity='0.035'%3E%3Cpath d='M26 0 L28 10 L26 8 L24 10 Z'/%3E%3Cpath d='M52 26 L42 28 L44 26 L42 24 Z'/%3E%3Cpath d='M26 52 L24 42 L26 44 L28 42 Z'/%3E%3Cpath d='M0 26 L10 24 L8 26 L10 28 Z'/%3E%3C/g%3E%3C/svg%3E");
+  opacity:.6;
+}
+
+.hero-glow {
+  position:absolute; top:50%; left:50%; transform:translate(-50%,-50%);
+  width:520px; height:520px; border-radius:50%; z-index:1; pointer-events:none;
+  background:radial-gradient(circle,rgba(184,134,42,.13) 0%,transparent 70%);
+  animation:gpulse 4s ease-in-out infinite;
+}
+@keyframes gpulse { 0%,100%{transform:translate(-50%,-50%) scale(1);opacity:.6;} 50%{transform:translate(-50%,-50%) scale(1.3);opacity:1;} }
+
+.h-ring {
+  position:absolute; top:50%; left:50%;
+  transform:translate(-50%,-50%);
+  width:min(92vw,680px); height:min(92vw,680px);
+  opacity:.07; z-index:1; pointer-events:none;
+  animation:rot 100s linear infinite;
+}
+@keyframes rot { to { transform:translate(-50%,-50%) rotate(360deg); } }
+
+.crn { position:absolute; width:clamp(90px,20vw,220px); opacity:.22; z-index:2; pointer-events:none; }
+.crn.tl{top:0;left:0;}
+.crn.tr{top:0;right:0;transform:scaleX(-1);}
+.crn.bl{bottom:0;left:0;transform:scaleY(-1);}
+.crn.br{bottom:0;right:0;transform:scale(-1);}
+
+.hero-diya {
+  position:absolute; font-size:1.4rem; z-index:2; pointer-events:none;
+  animation:diyabob ease-in-out infinite;
+}
+@keyframes diyabob { 0%,100%{transform:translateY(0) rotate(-5deg);} 50%{transform:translateY(-14px) rotate(5deg);} }
+
+.h-content { position:relative; z-index:3; display:flex; flex-direction:column; align-items:center; }
+
+.h-eyebrow {
+  font-family:'Raleway',sans-serif;
+  font-size:clamp(.6rem,1.8vw,.78rem); letter-spacing:6px; text-transform:uppercase;
+  color:var(--gold2); margin-bottom:28px;
+  animation:up 1.4s cubic-bezier(.22,1,.36,1) .15s both;
+}
+.h-band { display:flex; align-items:center; gap:18px; margin-bottom:14px; animation:up 1.4s cubic-bezier(.22,1,.36,1) .3s both; }
+.h-line { width:clamp(35px,9vw,90px); height:1px; background:linear-gradient(to right,transparent,var(--gold)); }
+.h-line.r { background:linear-gradient(to left,transparent,var(--gold)); }
+.h-sym { color:var(--gold2); font-size:1.1rem; }
+
+/* Names — letter by letter */
+.h-names {
+  font-family:'IM Fell English',serif;
+  font-size:clamp(3.8rem,13vw,8.5rem);
+  color:#fff; line-height:.88; letter-spacing:-1px;
+  display:block; position:relative;
+}
+/* shimmer overlay — separate element so it doesn't break letter spans */
+.name-shimmer {
+  position:absolute; inset:0; pointer-events:none; z-index:1;
+  background:linear-gradient(105deg,transparent 25%,rgba(255,220,80,.6) 50%,transparent 75%);
+  background-size:300% 100%;
+  -webkit-background-clip:text; background-clip:text;
+  color:transparent;
+  animation:shimmer 3.5s ease-in-out infinite 2.5s;
+}
+@keyframes shimmer { 0%{background-position:200% 0;} 100%{background-position:-200% 0;} }
+
+.h-names .letter {
+  display:inline-block; opacity:0;
+  animation:letterIn .55s cubic-bezier(.22,1,.36,1) both;
+}
+@keyframes letterIn { from{opacity:0;transform:translateY(22px) scale(.85);} to{opacity:1;transform:translateY(0) scale(1);} }
+
+.h-weds {
+  display:block; font-family:'Cormorant Garamond',serif;
+  font-size:clamp(1.3rem,4vw,2.4rem); color:var(--gold2);
+  font-style:italic; font-weight:300; letter-spacing:10px; margin:10px 0 8px;
+  animation:up 1.4s cubic-bezier(.22,1,.36,1) .55s both;
+}
+.h-date {
+  margin-top:30px; font-family:'Cormorant Garamond',serif;
+  font-size:clamp(.88rem,2.4vw,1.15rem); color:var(--blush);
+  font-style:italic; letter-spacing:2px;
+  animation:up 1.4s cubic-bezier(.22,1,.36,1) .75s both;
+}
+
+/* countdown */
+.h-cd { margin-top:34px; display:flex; gap:clamp(8px,2.5vw,20px); animation:up 1.4s cubic-bezier(.22,1,.36,1) .92s both; }
+.cd-cell { display:flex; flex-direction:column; align-items:center; gap:5px; }
+.cd-n {
+  font-family:'IM Fell English',serif; font-size:clamp(1.7rem,4.5vw,2.6rem); color:var(--gold2);
+  width:clamp(54px,11vw,70px); height:clamp(54px,11vw,70px);
+  display:flex; align-items:center; justify-content:center;
+  border:1px solid rgba(201,148,58,.3); border-radius:3px;
+  background:rgba(0,0,0,.28); backdrop-filter:blur(4px);
+}
+.cd-l { font-family:'Raleway',sans-serif; font-size:.54rem; letter-spacing:3px; text-transform:uppercase; color:rgba(237,213,184,.45); }
+
+.h-scroll {
+  margin-top:50px; font-family:'Raleway',sans-serif;
+  font-size:.56rem; letter-spacing:4px; text-transform:uppercase;
+  color:rgba(201,148,58,.42);
+  animation:up 1.4s ease 1.1s both, bob 2.4s ease 1.6s infinite;
+}
+@keyframes bob { 0%,100%{transform:translateY(0)} 50%{transform:translateY(8px)} }
+@keyframes up  { from{opacity:0;transform:translateY(26px)} to{opacity:1;transform:translateY(0)} }
+
+/* ══════════════ SHARED ══════════════ */
+.sec { padding:clamp(64px,10vw,108px) clamp(20px,5vw,60px); }
+.s-tag { text-align:center; font-family:'Raleway',sans-serif; font-size:.6rem; letter-spacing:5px; text-transform:uppercase; color:var(--gold); margin-bottom:10px; }
+.s-title { font-family:'IM Fell English',serif; font-size:clamp(1.9rem,5.5vw,3rem); text-align:center; color:var(--maroon); font-style:italic; margin-bottom:6px; }
+.s-sub { text-align:center; font-size:clamp(.9rem,2.5vw,1.05rem); color:var(--muted); font-style:italic; font-weight:300; margin-bottom:44px; }
+.orn { display:flex; align-items:center; justify-content:center; gap:14px; margin-bottom:52px; }
+.orn-l { flex:1; max-width:180px; height:1px; background:linear-gradient(to right,transparent,var(--gold)); }
+.orn-l.r { background:linear-gradient(to left,transparent,var(--gold)); }
+.orn-s { color:var(--gold); font-size:1.2rem; }
+/* universal reveal */
+.rev { opacity:0; transform:translateY(20px); transition:opacity .7s ease,transform .7s ease; }
+.rev.vis { opacity:1; transform:translateY(0); }
+
+/* ══════════════ STORY ══════════════ */
+.story-sec { background:var(--cream); }
+.story-inner {
+  max-width:680px; margin:0 auto; text-align:center;
+  background:#fff; border:1px solid rgba(184,134,42,.2); border-radius:3px;
+  padding:clamp(32px,6vw,56px) clamp(24px,5vw,52px);
+  box-shadow:0 4px 40px rgba(107,21,32,.06); position:relative; overflow:hidden;
+}
+.story-inner::before {
+  content:'❝'; position:absolute; top:10px; left:18px;
+  font-size:5rem; color:rgba(184,134,42,.1); font-family:'IM Fell English',serif; line-height:1; pointer-events:none;
+}
+.story-text { font-family:'Cormorant Garamond',serif; font-size:clamp(1.05rem,2.8vw,1.25rem); color:var(--ink); line-height:1.9; font-style:italic; font-weight:300; position:relative; z-index:1; }
+.story-text strong { color:var(--maroon); font-style:normal; font-weight:600; }
+.story-sig { margin-top:24px; font-family:'IM Fell English',serif; font-size:1.3rem; color:var(--gold); font-style:italic; }
+
+/* ══════════════ EVENTS ══════════════ */
+.ev-sec { background:var(--warm); position:relative; overflow:hidden; }
+.ev-sec::before {
+  content:''; position:absolute; top:-120px; right:-120px; width:400px; height:400px; border-radius:50%;
+  background:radial-gradient(circle,rgba(184,134,42,.06) 0%,transparent 70%); pointer-events:none;
+}
+.ev-sec::after {
+  content:''; position:absolute; bottom:-80px; left:-80px; width:300px; height:300px; border-radius:50%;
+  background:radial-gradient(circle,rgba(107,21,32,.04) 0%,transparent 70%); pointer-events:none;
+}
+
+/* card grid — 2 cols on desktop, 1 on mobile */
+.ev-grid {
+  display:grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap:24px;
+  max-width:920px;
+  margin:0 auto;
+}
+/* wedding card spans full width */
+.ev-grid .ev.wedding-card {
+  grid-column: 1 / -1;
+  max-width:500px;
+  margin:0 auto;
+  width:100%;
+}
+
+/* each event is now a card */
+.ev {
+  background:#fff;
+  border-radius:8px;
+  border:1px solid rgba(184,134,42,.18);
+  overflow:hidden;
+  opacity:0; transform:translateY(22px);
+  transition:opacity .6s ease, transform .6s ease, box-shadow .3s, border-color .3s;
+  box-shadow:0 2px 16px rgba(107,21,32,.05);
+}
+.ev.vis { opacity:1; transform:translateY(0); }
+.ev:hover { box-shadow:0 8px 32px rgba(107,21,32,.12); border-color:rgba(184,134,42,.4); }
+
+/* coloured top stripe per ceremony */
+.ev-stripe {
+  height:4px;
+  width:100%;
+}
+
+/* card top section */
+.ev-head {
+  padding:22px 24px 16px;
+  display:flex;
+  align-items:center;
+  gap:16px;
+  border-bottom:1px solid rgba(184,134,42,.1);
+}
+.ev-ico-wrap {
+  width:52px; height:52px; border-radius:50%;
+  display:flex; align-items:center; justify-content:center;
+  font-size:1.6rem; flex-shrink:0;
+}
+.ev-head-text { flex:1; }
+.ev-name {
+  font-family:'IM Fell English',serif;
+  font-size:clamp(1.2rem,3vw,1.6rem);
+  color:var(--maroon); font-style:italic;
+  line-height:1.1; margin-bottom:4px;
+}
+.ev-date-tag {
+  font-family:'Raleway',sans-serif;
+  font-size:.6rem; letter-spacing:2.5px; text-transform:uppercase;
+  color:var(--gold); font-weight:500;
+}
+
+/* card body */
+.ev-bd { padding:16px 24px 20px; }
+.ev-rows { display:flex; flex-direction:column; gap:8px; }
+.ev-r {
+  display:flex; gap:10px; align-items:center;
+  font-size:clamp(.82rem,2vw,.92rem); color:var(--muted); font-weight:300;
+}
+.ev-r .i { flex-shrink:0; font-size:.9rem; width:18px; text-align:center; }
+.swatch {
+  display:inline-block; width:10px; height:10px; border-radius:50%;
+  flex-shrink:0; border:1px solid rgba(0,0,0,.1); margin-right:2px;
+}
+
+/* card footer */
+.ev-foot {
+  padding:12px 24px 18px;
+  display:flex; flex-wrap:wrap; align-items:center; gap:8px;
+  border-top:1px solid rgba(184,134,42,.08);
+}
+.ev-pill {
+  display:inline-flex; align-items:center;
+  padding:5px 14px; border:1px solid rgba(184,134,42,.32); border-radius:20px;
+  font-family:'Raleway',sans-serif; font-size:.58rem; letter-spacing:2px; text-transform:uppercase; color:var(--gold);
+}
+.ev-cal {
+  display:inline-flex; align-items:center; gap:5px;
+  padding:5px 12px; background:rgba(184,134,42,.08); border:1px solid rgba(184,134,42,.22); border-radius:20px;
+  font-family:'Raleway',sans-serif; font-size:.56rem; letter-spacing:1.5px; text-transform:uppercase;
+  color:var(--gold); text-decoration:none; transition:background .2s;
+  white-space:nowrap;
+}
+.ev-cal:hover { background:rgba(184,134,42,.2); }
+
+/* wedding card special dark style */
+.ev.wedding-card { background:linear-gradient(135deg, var(--maroon) 0%, #4A0D16 100%); border-color:rgba(201,148,58,.3); }
+.ev.wedding-card .ev-head { border-bottom-color:rgba(201,148,58,.15); }
+.ev.wedding-card .ev-name { color:var(--gold2); font-size:clamp(1.4rem,4vw,2rem); }
+.ev.wedding-card .ev-date-tag { color:var(--blush); opacity:.8; }
+.ev.wedding-card .ev-bd .ev-r { color:var(--blush); opacity:.85; }
+.ev.wedding-card .ev-foot { border-top-color:rgba(201,148,58,.12); }
+.ev.wedding-card .ev-pill { border-color:rgba(201,148,58,.45); color:var(--gold2); }
+.ev.wedding-card .ev-cal { background:rgba(201,148,58,.12); border-color:rgba(201,148,58,.3); color:var(--gold2); }
+.ev.wedding-card .ev-cal:hover { background:rgba(201,148,58,.25); }
+.ev.wedding-card:hover { box-shadow:0 12px 40px rgba(0,0,0,.3); }
+
+@media(max-width:600px){
+  .ev-grid { grid-template-columns:1fr; }
+  .ev-grid .ev.wedding-card { max-width:100%; }
+}
+
+/* ══════════════ VENUE ══════════════ */
+.v-sec { background:var(--cream); }
+.v-grid { max-width:900px; margin:0 auto; display:grid; grid-template-columns:repeat(auto-fit,minmax(255px,1fr)); gap:22px; }
+.vc {
+  border:1px solid rgba(184,134,42,.22); border-radius:2px; overflow:hidden; background:#fff;
+  opacity:0; transform:translateY(18px);
+  transition:opacity .6s ease,transform .6s ease,box-shadow .3s;
+}
+.vc.vis { opacity:1; transform:translateY(0); }
+.vc:hover { box-shadow:0 10px 36px rgba(107,21,32,.1); }
+.v-map { height:150px; background:linear-gradient(135deg,var(--warm),var(--blush)); display:flex; align-items:center; justify-content:center; flex-direction:column; gap:5px; font-size:1.9rem; color:var(--muted); border-bottom:1px solid rgba(184,134,42,.14); }
+.v-map small { font-family:'Raleway',sans-serif; font-size:.6rem; letter-spacing:2px; text-transform:uppercase; opacity:.55; }
+.v-body { padding:20px 22px 24px; }
+.v-etag { font-family:'Raleway',sans-serif; font-size:.57rem; letter-spacing:2.5px; text-transform:uppercase; color:var(--gold); margin-bottom:7px; }
+.v-name { font-family:'IM Fell English',serif; font-size:1.2rem; color:var(--maroon); font-style:italic; margin-bottom:5px; }
+.v-addr { font-size:.83rem; color:var(--muted); line-height:1.65; font-weight:300; }
+.v-btn { display:inline-block; margin-top:14px; padding:7px 18px; border:1px solid var(--maroon); border-radius:1px; color:var(--maroon); font-family:'Raleway',sans-serif; font-size:.6rem; letter-spacing:2.5px; text-transform:uppercase; text-decoration:none; transition:background .25s,color .25s; }
+.v-btn:hover { background:var(--maroon); color:#fff; }
+
+/* ══════════════ SHAGUN ══════════════ */
+.shagun-sec { background:linear-gradient(160deg,#1a0608 0%,#2E0A14 45%,#3A1000 100%); position:relative; overflow:hidden; }
+.shagun-sec .s-tag   { color:var(--gold2); }
+.shagun-sec .s-title { color:var(--cream); }
+.shagun-sec .s-sub   { color:rgba(237,213,184,.55); }
+.shagun-sec .orn-l   { background:linear-gradient(to right,transparent,var(--gold2)); }
+.shagun-sec .orn-l.r { background:linear-gradient(to left,transparent,var(--gold2)); }
+.shagun-sec .orn-s   { color:var(--gold2); }
+
+.coin { position:absolute; pointer-events:none; opacity:0; animation:coinfall linear infinite; user-select:none; }
+@keyframes coinfall { 0%{opacity:0;transform:translateY(-30px) rotate(0deg);} 8%{opacity:.8;} 92%{opacity:.3;} 100%{opacity:0;transform:translateY(100vh) rotate(720deg);} }
+
+.sg-cards { display:grid; grid-template-columns:1fr 1fr; gap:28px; max-width:780px; margin:0 auto; }
+.sg-card {
+  background:rgba(255,255,255,.045); border:1px solid rgba(201,148,58,.28); border-radius:4px;
+  padding:clamp(24px,4vw,40px) clamp(20px,3.5vw,36px); text-align:center;
+  opacity:0; transform:translateY(20px);
+  transition:opacity .65s ease,transform .65s ease,border-color .3s,box-shadow .3s;
+}
+.sg-card.vis { opacity:1; transform:translateY(0); }
+.sg-card:hover { border-color:rgba(201,148,58,.65); box-shadow:0 0 28px rgba(201,148,58,.14); }
+
+.sg-avatar { width:60px; height:60px; border-radius:50%; border:1.5px solid var(--gold); background:rgba(201,148,58,.1); display:flex; align-items:center; justify-content:center; font-size:1.8rem; margin:0 auto 14px; }
+.sg-name { font-family:'IM Fell English',serif; font-size:clamp(1.4rem,4vw,1.9rem); color:var(--gold2); font-style:italic; margin-bottom:3px; }
+.sg-role { font-family:'Raleway',sans-serif; font-size:.58rem; letter-spacing:3px; text-transform:uppercase; color:var(--muted); margin-bottom:22px; }
+
+/* QR wrapper — white bg, proper sizing */
+.sg-qr-wrap {
+  background:#fff; border-radius:8px; padding:12px;
+  display:inline-flex; align-items:center; justify-content:center;
+  box-shadow:0 6px 28px rgba(0,0,0,.4); margin-bottom:14px;
+  position:relative; width:184px; height:184px;
+}
+/* the QRCode lib creates a canvas inside — make it fill the wrap */
+.sg-qr-wrap canvas,
+.sg-qr-wrap img { width:160px !important; height:160px !important; display:block; }
+.sg-qr-logo {
+  position:absolute; top:50%; left:50%; transform:translate(-50%,-50%);
+  width:32px; height:32px; background:#fff; border-radius:50%;
+  display:flex; align-items:center; justify-content:center; font-size:1.1rem;
+  box-shadow:0 0 0 4px #fff; pointer-events:none;
+}
+
+/* loading state for QR */
+.sg-qr-wrap.loading::before {
+  content:'⏳'; position:absolute; inset:0;
+  display:flex; align-items:center; justify-content:center; font-size:1.5rem;
+  background:#fff; border-radius:8px; z-index:2;
+}
+.sg-qr-wrap.error::before {
+  content:'⚠️ QR unavailable'; position:absolute; inset:0;
+  display:flex; align-items:center; justify-content:center;
+  font-size:.7rem; color:#c00; background:#fff; border-radius:8px; z-index:2;
+  padding:8px; text-align:center;
+}
+
+.sg-upi { font-family:monospace; font-size:.72rem; letter-spacing:.5px; color:rgba(255,255,255,.4); margin-bottom:18px; word-break:break-all; }
+.sg-pay-btn {
+  display:flex; align-items:center; justify-content:center; gap:8px; width:100%; padding:13px;
+  background:linear-gradient(90deg,var(--gold) 0%,#C8712A 100%); border:none; border-radius:3px; color:#fff;
+  font-family:'Raleway',sans-serif; font-size:.72rem; font-weight:600; letter-spacing:2px; text-transform:uppercase;
+  cursor:pointer; text-decoration:none; transition:opacity .22s,transform .2s;
+}
+.sg-pay-btn:hover { opacity:.86; transform:translateY(-1px); }
+/* fallback copy button shown on desktop where upi:// won't open */
+.sg-copy-btn {
+  display:flex; align-items:center; justify-content:center; gap:6px; width:100%; padding:9px;
+  background:transparent; border:1px solid rgba(201,148,58,.35); border-radius:3px; color:var(--gold2);
+  font-family:'Raleway',sans-serif; font-size:.65rem; letter-spacing:1.5px; text-transform:uppercase;
+  cursor:pointer; margin-top:8px; transition:background .2s;
+}
+.sg-copy-btn:hover { background:rgba(201,148,58,.1); }
+.sg-copy-btn.copied { color:#4CAF50; border-color:#4CAF50; }
+
+.sg-apps { display:flex; justify-content:center; gap:7px; flex-wrap:wrap; margin-top:12px; }
+.sg-app { font-family:'Raleway',sans-serif; font-size:.6rem; letter-spacing:1px; color:rgba(255,255,255,.25); padding:3px 9px; border:1px solid rgba(255,255,255,.1); border-radius:12px; }
+.sg-note { text-align:center; margin-top:44px; font-family:'Cormorant Garamond',serif; font-size:1rem; font-style:italic; font-weight:300; color:rgba(237,213,184,.38); max-width:420px; margin-left:auto; margin-right:auto; }
+
+/* ══════════════ FOOTER ══════════════ */
+footer { background:#0E0205; text-align:center; padding:clamp(40px,8vw,68px) 24px; border-top:1px solid rgba(184,134,42,.12); }
+.ft-diya { font-size:2rem; display:block; margin-bottom:16px; animation:flameglow 1.8s ease-in-out infinite; }
+@keyframes flameglow {
+  0%,100%{ filter:drop-shadow(0 0 4px rgba(255,160,0,.6)) drop-shadow(0 0 8px rgba(255,100,0,.3)); }
+  50%    { filter:drop-shadow(0 0 12px rgba(255,210,0,1)) drop-shadow(0 0 24px rgba(255,130,0,.7)); }
+}
+.ft-names { font-family:'IM Fell English',serif; font-size:clamp(1.7rem,5vw,2.7rem); color:var(--gold2); font-style:italic; margin-bottom:5px; }
+.ft-hash { font-family:'Raleway',sans-serif; font-size:.62rem; letter-spacing:4px; text-transform:uppercase; color:rgba(184,134,42,.42); margin-bottom:20px; }
+.ft-div { display:flex; align-items:center; justify-content:center; gap:10px; margin:16px 0; }
+.ft-dl { width:55px; height:1px; background:rgba(184,134,42,.18); }
+.ft-ds { color:rgba(184,134,42,.3); font-size:.85rem; }
+.ft-fam { font-size:.85rem; color:rgba(150,100,74,.65); font-style:italic; line-height:2.2; }
+.ft-copy { margin-top:24px; font-family:'Raleway',sans-serif; font-size:.6rem; color:rgba(150,100,74,.28); letter-spacing:1px; }
+
+
+
+/* ── MOBILE ── */
+@media(max-width:540px){
+  .sg-cards { grid-template-columns:1fr; gap:20px; }
+  .timeline::before { left:20px; }
+  .ev { grid-template-columns:46px 1fr; gap:10px; }
+  .ev-dc::after { right:-9px; }
+}
+</style>
 </head>
 <body>
 
+<div id="progress-bar"></div>
 <div id="petals"></div>
+<div id="fireflies"></div>
 
-<!-- ════════ HERO ════════ -->
+
+
+<!-- ══════════ HERO ══════════ -->
 <section class="hero">
+  <div class="hero-glow"></div>
 
-  <!-- mandala ring -->
+  <!-- Floating diyas -->
+  <span class="hero-diya" style="top:18%;left:8%;animation-duration:4s;animation-delay:0s">🪔</span>
+  <span class="hero-diya" style="top:14%;right:10%;animation-duration:5s;animation-delay:.8s">🪔</span>
+  <span class="hero-diya" style="top:72%;left:6%;animation-duration:4.5s;animation-delay:1.5s">🪔</span>
+  <span class="hero-diya" style="top:68%;right:8%;animation-duration:3.8s;animation-delay:.4s">🪔</span>
+  <span class="hero-diya" style="top:40%;left:3%;animation-duration:5.5s;animation-delay:2s;font-size:1rem">🌸</span>
+  <span class="hero-diya" style="top:38%;right:4%;animation-duration:4.8s;animation-delay:1s;font-size:1rem">🌸</span>
+
+  <!-- Mandala ring -->
   <svg class="h-ring" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
     <circle cx="200" cy="200" r="192" stroke="#C9943A" stroke-width=".7"/>
     <circle cx="200" cy="200" r="168" stroke="#C9943A" stroke-width=".4"/>
@@ -27,72 +497,43 @@
     <circle cx="200" cy="200" r="112" stroke="#C9943A" stroke-width=".4"/>
     <circle cx="200" cy="200" r="82"  stroke="#C9943A" stroke-width=".6"/>
     <circle cx="200" cy="200" r="50"  stroke="#C9943A" stroke-width=".4"/>
-    <line x1="200" y1="8"   x2="200" y2="392" stroke="#C9943A" stroke-width=".35" opacity=".5"/>
-    <line x1="8"   y1="200" x2="392" y2="200" stroke="#C9943A" stroke-width=".35" opacity=".5"/>
-    <line x1="57"  y1="57"  x2="343" y2="343" stroke="#C9943A" stroke-width=".25" opacity=".35"/>
-    <line x1="343" y1="57"  x2="57"  y2="343" stroke="#C9943A" stroke-width=".25" opacity=".35"/>
-    <line x1="130" y1="8"   x2="270" y2="392" stroke="#C9943A" stroke-width=".18" opacity=".22"/>
-    <line x1="270" y1="8"   x2="130" y2="392" stroke="#C9943A" stroke-width=".18" opacity=".22"/>
-    <line x1="8"   y1="130" x2="392" y2="270" stroke="#C9943A" stroke-width=".18" opacity=".22"/>
-    <line x1="8"   y1="270" x2="392" y2="130" stroke="#C9943A" stroke-width=".18" opacity=".22"/>
-    <ellipse cx="200" cy="14" rx="5.5" ry="15" fill="#C9943A" opacity=".28" transform="rotate(0   200 200)"/>
-    <ellipse cx="200" cy="14" rx="5.5" ry="15" fill="#C9943A" opacity=".28" transform="rotate(22.5 200 200)"/>
-    <ellipse cx="200" cy="14" rx="5.5" ry="15" fill="#C9943A" opacity=".28" transform="rotate(45  200 200)"/>
-    <ellipse cx="200" cy="14" rx="5.5" ry="15" fill="#C9943A" opacity=".28" transform="rotate(67.5 200 200)"/>
-    <ellipse cx="200" cy="14" rx="5.5" ry="15" fill="#C9943A" opacity=".28" transform="rotate(90  200 200)"/>
-    <ellipse cx="200" cy="14" rx="5.5" ry="15" fill="#C9943A" opacity=".28" transform="rotate(112.5 200 200)"/>
-    <ellipse cx="200" cy="14" rx="5.5" ry="15" fill="#C9943A" opacity=".28" transform="rotate(135  200 200)"/>
-    <ellipse cx="200" cy="14" rx="5.5" ry="15" fill="#C9943A" opacity=".28" transform="rotate(157.5 200 200)"/>
-    <ellipse cx="200" cy="14" rx="5.5" ry="15" fill="#C9943A" opacity=".28" transform="rotate(180  200 200)"/>
-    <ellipse cx="200" cy="14" rx="5.5" ry="15" fill="#C9943A" opacity=".28" transform="rotate(202.5 200 200)"/>
-    <ellipse cx="200" cy="14" rx="5.5" ry="15" fill="#C9943A" opacity=".28" transform="rotate(225  200 200)"/>
-    <ellipse cx="200" cy="14" rx="5.5" ry="15" fill="#C9943A" opacity=".28" transform="rotate(247.5 200 200)"/>
-    <ellipse cx="200" cy="14" rx="5.5" ry="15" fill="#C9943A" opacity=".28" transform="rotate(270  200 200)"/>
-    <ellipse cx="200" cy="14" rx="5.5" ry="15" fill="#C9943A" opacity=".28" transform="rotate(292.5 200 200)"/>
-    <ellipse cx="200" cy="14" rx="5.5" ry="15" fill="#C9943A" opacity=".28" transform="rotate(315  200 200)"/>
-    <ellipse cx="200" cy="14" rx="5.5" ry="15" fill="#C9943A" opacity=".28" transform="rotate(337.5 200 200)"/>
+    <line x1="200" y1="8"   x2="200" y2="392" stroke="#C9943A" stroke-width=".3" opacity=".5"/>
+    <line x1="8"   y1="200" x2="392" y2="200" stroke="#C9943A" stroke-width=".3" opacity=".5"/>
+    <line x1="57"  y1="57"  x2="343" y2="343" stroke="#C9943A" stroke-width=".2" opacity=".35"/>
+    <line x1="343" y1="57"  x2="57"  y2="343" stroke="#C9943A" stroke-width=".2" opacity=".35"/>
+    <ellipse cx="200" cy="14" rx="5.5" ry="15" fill="#C9943A" opacity=".25" transform="rotate(0   200 200)"/>
+    <ellipse cx="200" cy="14" rx="5.5" ry="15" fill="#C9943A" opacity=".25" transform="rotate(45  200 200)"/>
+    <ellipse cx="200" cy="14" rx="5.5" ry="15" fill="#C9943A" opacity=".25" transform="rotate(90  200 200)"/>
+    <ellipse cx="200" cy="14" rx="5.5" ry="15" fill="#C9943A" opacity=".25" transform="rotate(135 200 200)"/>
+    <ellipse cx="200" cy="14" rx="5.5" ry="15" fill="#C9943A" opacity=".25" transform="rotate(180 200 200)"/>
+    <ellipse cx="200" cy="14" rx="5.5" ry="15" fill="#C9943A" opacity=".25" transform="rotate(225 200 200)"/>
+    <ellipse cx="200" cy="14" rx="5.5" ry="15" fill="#C9943A" opacity=".25" transform="rotate(270 200 200)"/>
+    <ellipse cx="200" cy="14" rx="5.5" ry="15" fill="#C9943A" opacity=".25" transform="rotate(315 200 200)"/>
   </svg>
 
-  <!-- corners -->
-  <svg class="crn tl" viewBox="0 0 160 160" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M0 0 L110 0 Q50 50 0 110 Z" fill="#C9943A"/>
-    <path d="M0 0 L0 110 Q50 50 110 0 Z" fill="#C9943A" opacity=".4"/>
-    <circle cx="11" cy="11" r="5" fill="none" stroke="#C9943A" stroke-width="1.5"/>
-    <circle cx="11" cy="11" r="10" fill="none" stroke="#C9943A" stroke-width=".7" opacity=".45"/>
-    <path d="M2 22 Q22 2 42 22" fill="none" stroke="#C9943A" stroke-width=".8" opacity=".55"/>
-    <path d="M2 38 Q38 2 68 38" fill="none" stroke="#C9943A" stroke-width=".5" opacity=".3"/>
-  </svg>
-  <svg class="crn tr" viewBox="0 0 160 160" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M0 0 L110 0 Q50 50 0 110 Z" fill="#C9943A"/>
-    <path d="M0 0 L0 110 Q50 50 110 0 Z" fill="#C9943A" opacity=".4"/>
-    <circle cx="11" cy="11" r="5" fill="none" stroke="#C9943A" stroke-width="1.5"/>
-    <circle cx="11" cy="11" r="10" fill="none" stroke="#C9943A" stroke-width=".7" opacity=".45"/>
-  </svg>
-  <svg class="crn bl" viewBox="0 0 160 160" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M0 0 L110 0 Q50 50 0 110 Z" fill="#C9943A"/>
-    <path d="M0 0 L0 110 Q50 50 110 0 Z" fill="#C9943A" opacity=".4"/>
-    <circle cx="11" cy="11" r="5" fill="none" stroke="#C9943A" stroke-width="1.5"/>
-  </svg>
-  <svg class="crn br" viewBox="0 0 160 160" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M0 0 L110 0 Q50 50 0 110 Z" fill="#C9943A"/>
-    <path d="M0 0 L0 110 Q50 50 110 0 Z" fill="#C9943A" opacity=".4"/>
-    <circle cx="11" cy="11" r="5" fill="none" stroke="#C9943A" stroke-width="1.5"/>
-  </svg>
+  <!-- Corners -->
+  <svg class="crn tl" viewBox="0 0 180 180" fill="none"><path d="M0 0 L130 0 Q60 60 0 130 Z" fill="#C9943A"/><path d="M0 0 L0 130 Q60 60 130 0 Z" fill="#C9943A" opacity=".4"/><circle cx="12" cy="12" r="6" fill="none" stroke="#C9943A" stroke-width="1.5"/><circle cx="12" cy="12" r="13" fill="none" stroke="#C9943A" stroke-width=".6" opacity=".4"/><path d="M2 26 Q26 2 50 26" fill="none" stroke="#C9943A" stroke-width=".9" opacity=".5"/></svg>
+  <svg class="crn tr" viewBox="0 0 180 180" fill="none"><path d="M0 0 L130 0 Q60 60 0 130 Z" fill="#C9943A"/><path d="M0 0 L0 130 Q60 60 130 0 Z" fill="#C9943A" opacity=".4"/><circle cx="12" cy="12" r="6" fill="none" stroke="#C9943A" stroke-width="1.5"/></svg>
+  <svg class="crn bl" viewBox="0 0 180 180" fill="none"><path d="M0 0 L130 0 Q60 60 0 130 Z" fill="#C9943A"/><path d="M0 0 L0 130 Q60 60 130 0 Z" fill="#C9943A" opacity=".4"/><circle cx="12" cy="12" r="6" fill="none" stroke="#C9943A" stroke-width="1.5"/></svg>
+  <svg class="crn br" viewBox="0 0 180 180" fill="none"><path d="M0 0 L130 0 Q60 60 0 130 Z" fill="#C9943A"/><path d="M0 0 L0 130 Q60 60 130 0 Z" fill="#C9943A" opacity=".4"/><circle cx="12" cy="12" r="6" fill="none" stroke="#C9943A" stroke-width="1.5"/></svg>
 
   <div class="h-content">
     <p class="h-eyebrow">Together with their families · We joyfully invite you</p>
+    <div class="h-band"><div class="h-line"></div><span class="h-sym">🪔</span><div class="h-line r"></div></div>
 
-    <div class="h-band">
-      <div class="h-line"></div><span class="h-sym">🪔</span><div class="h-line r"></div>
+    <div class="h-name-wrap">
+      <h1 class="h-names" id="name-yukta" data-text="Yukta"></h1>
+      <div class="name-shimmer" aria-hidden="true">Yukta</div>
     </div>
-
-    <h1 class="h-names">Yukta</h1>
     <span class="h-weds">weds</span>
-    <h1 class="h-names">Nikhil</h1>
+    <div class="h-name-wrap">
+      <h1 class="h-names" id="name-nikhil" data-text="Nikhil"></h1>
+      <div class="name-shimmer" aria-hidden="true">Nikhil</div>
+    </div>
 
     <p class="h-date">29 April 2026 &nbsp;·&nbsp; 10 in the morning</p>
 
-    <div class="h-cd" id="countdown-timer">
+    <div class="h-cd" id="cdWrap">
       <div class="cd-cell"><div class="cd-n" id="cd-d">--</div><div class="cd-l">Days</div></div>
       <div class="cd-cell"><div class="cd-n" id="cd-h">--</div><div class="cd-l">Hours</div></div>
       <div class="cd-cell"><div class="cd-n" id="cd-m">--</div><div class="cd-l">Mins</div></div>
@@ -103,213 +544,394 @@
   </div>
 </section>
 
-<!-- ════════ EVENTS ════════ -->
+<!-- ══════════ STORY ══════════ -->
+<section class="sec story-sec" id="story">
+  <p class="s-tag rev">How It All Began</p>
+  <h2 class="s-title rev">Our Story</h2>
+  <div class="orn rev"><div class="orn-l"></div><span class="orn-s">✦</span><div class="orn-l r"></div></div>
+  <div class="story-inner rev">
+    <p class="story-text">
+      Some connections are written in the stars long before the two people ever meet.<br/><br/>
+      <strong>Yukta &amp; Nikhil</strong> found in each other not just a partner, but a home —
+      a place of laughter, warmth and quiet understanding. Through shared moments big and small,
+      their bond grew into something beautiful and unbreakable.<br/><br/>
+      And now, surrounded by everyone they love most, they take the most wonderful step of all —
+      <strong>a lifetime together.</strong>
+    </p>
+    <div class="story-sig">— Yukta &amp; Nikhil 🪔</div>
+  </div>
+</section>
+
+<!-- ══════════ EVENTS ══════════ -->
 <section class="sec ev-sec" id="events">
   <p class="s-tag rev">Mark Your Calendar</p>
   <h2 class="s-title rev">The Celebrations</h2>
   <p class="s-sub rev">Five ceremonies, one beautiful love story</p>
-  <div class="orn rev">
-    <div class="orn-l"></div><span class="orn-s">✦</span><div class="orn-l r"></div>
-  </div>
+  <div class="orn rev"><div class="orn-l"></div><span class="orn-s">✦</span><div class="orn-l r"></div></div>
 
-  <div class="timeline">
+  <div class="ev-grid">
 
+    <!-- Engagement -->
     <div class="ev">
-      <div class="ev-dc"><div class="ev-day">30</div><div class="ev-mon">March</div></div>
+      <div class="ev-stripe" style="background:linear-gradient(90deg,#C9473A,#E07B39)"></div>
+      <div class="ev-head">
+        <div class="ev-ico-wrap" style="background:#FEF0EE">💍</div>
+        <div class="ev-head-text">
+          <div class="ev-name">Engagement</div>
+          <div class="ev-date-tag">30 March 2026</div>
+        </div>
+      </div>
       <div class="ev-bd">
-        <span class="ev-ico">💍</span>
-        <div class="ev-name">Engagement</div>
         <div class="ev-rows">
           <div class="ev-r"><span class="i">🕐</span>Time to be announced</div>
           <div class="ev-r"><span class="i">📍</span>Venue to be announced</div>
-          <div class="ev-r"><span class="i">👗</span>Traditional / Semi-formal</div>
+          <div class="ev-r"><span class="i">👗</span><span class="swatch" style="background:#C9473A"></span>Traditional / Semi-formal</div>
         </div>
-        <span class="ev-pill">Engagement Ceremony</span>
+      </div>
+      <div class="ev-foot">
+        <span class="ev-pill">Engagement</span>
+        <a class="ev-cal" href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Yukta+%26+Nikhil+Engagement&dates=20260330/20260331" target="_blank" rel="noopener">📅 Calendar</a>
       </div>
     </div>
 
+    <!-- Mehendi -->
     <div class="ev">
-      <div class="ev-dc"><div class="ev-day">27</div><div class="ev-mon">April</div></div>
-      <div class="ev-bd">
-        <span class="ev-ico">🌿</span>
-        <div class="ev-name">Mehendi</div>
-        <div class="ev-rows">
-          <div class="ev-r"><span class="i">🕓</span>4:00 PM — 6:00 PM</div>
-          <div class="ev-r"><span class="i">📍</span>Venue to be announced</div>
-          <div class="ev-r"><span class="i">👗</span>Colourful Ethnic Wear</div>
+      <div class="ev-stripe" style="background:linear-gradient(90deg,#2D6B36,#5BAD6A)"></div>
+      <div class="ev-head">
+        <div class="ev-ico-wrap" style="background:#EEF7EE">🌿</div>
+        <div class="ev-head-text">
+          <div class="ev-name">Mehendi</div>
+          <div class="ev-date-tag">27 April 2026 · 4:00 – 6:00 PM</div>
         </div>
-        <span class="ev-pill">Mehendi Ceremony</span>
+      </div>
+      <div class="ev-bd">
+        <div class="ev-rows">
+          <div class="ev-r"><span class="i">📍</span>Venue to be announced</div>
+          <div class="ev-r"><span class="i">👗</span><span class="swatch" style="background:#E07B39"></span>Colourful Ethnic Wear</div>
+        </div>
+      </div>
+      <div class="ev-foot">
+        <span class="ev-pill">Mehendi</span>
+        <a class="ev-cal" href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Yukta+%26+Nikhil+Mehendi&dates=20260427T160000/20260427T180000" target="_blank" rel="noopener">📅 Calendar</a>
       </div>
     </div>
 
+    <!-- Haldi -->
     <div class="ev">
-      <div class="ev-dc"><div class="ev-day">28</div><div class="ev-mon">April</div></div>
-      <div class="ev-bd">
-        <span class="ev-ico">🌼</span>
-        <div class="ev-name">Haldi</div>
-        <div class="ev-rows">
-          <div class="ev-r"><span class="i">🕙</span>10:00 AM — 1:00 PM</div>
-          <div class="ev-r"><span class="i">📍</span>Venue to be announced</div>
-          <div class="ev-r"><span class="i">👗</span>Yellow / White Ethnic</div>
+      <div class="ev-stripe" style="background:linear-gradient(90deg,#D4A000,#F5D020)"></div>
+      <div class="ev-head">
+        <div class="ev-ico-wrap" style="background:#FFFBEA">🌼</div>
+        <div class="ev-head-text">
+          <div class="ev-name">Haldi</div>
+          <div class="ev-date-tag">28 April 2026 · 10:00 AM – 1:00 PM</div>
         </div>
-        <span class="ev-pill">Haldi Ceremony</span>
+      </div>
+      <div class="ev-bd">
+        <div class="ev-rows">
+          <div class="ev-r"><span class="i">📍</span>Venue to be announced</div>
+          <div class="ev-r"><span class="i">👗</span><span class="swatch" style="background:#F5D020"></span>Yellow / White Ethnic</div>
+        </div>
+      </div>
+      <div class="ev-foot">
+        <span class="ev-pill">Haldi</span>
+        <a class="ev-cal" href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Yukta+%26+Nikhil+Haldi&dates=20260428T100000/20260428T130000" target="_blank" rel="noopener">📅 Calendar</a>
       </div>
     </div>
 
+    <!-- Sangeet -->
     <div class="ev">
-      <div class="ev-dc"><div class="ev-day">28</div><div class="ev-mon">April</div></div>
-      <div class="ev-bd">
-        <span class="ev-ico">🎶</span>
-        <div class="ev-name">Sangeet</div>
-        <div class="ev-rows">
-          <div class="ev-r"><span class="i">🕘</span>9:00 PM — 10:30 PM</div>
-          <div class="ev-r"><span class="i">📍</span>Venue to be announced</div>
-          <div class="ev-r"><span class="i">👗</span>Festive / Party Wear</div>
+      <div class="ev-stripe" style="background:linear-gradient(90deg,#6B3FA0,#9B6BD4)"></div>
+      <div class="ev-head">
+        <div class="ev-ico-wrap" style="background:#F5EEFF">🎶</div>
+        <div class="ev-head-text">
+          <div class="ev-name">Sangeet</div>
+          <div class="ev-date-tag">28 April 2026 · 9:00 – 10:30 PM</div>
         </div>
+      </div>
+      <div class="ev-bd">
+        <div class="ev-rows">
+          <div class="ev-r"><span class="i">📍</span>Venue to be announced</div>
+          <div class="ev-r"><span class="i">👗</span><span class="swatch" style="background:#9B59B6"></span>Festive / Party Wear</div>
+        </div>
+      </div>
+      <div class="ev-foot">
         <span class="ev-pill">Music &amp; Dance Night</span>
+        <a class="ev-cal" href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Yukta+%26+Nikhil+Sangeet&dates=20260428T210000/20260428T223000" target="_blank" rel="noopener">📅 Calendar</a>
       </div>
     </div>
 
-    <div class="ev">
-      <div class="ev-dc">
-        <div class="ev-day" style="color:var(--gold)">29</div>
-        <div class="ev-mon">April</div>
+    <!-- Wedding — full width dark card -->
+    <div class="ev wedding-card">
+      <div class="ev-stripe" style="background:linear-gradient(90deg,var(--gold),#E07B39,var(--gold))"></div>
+      <div class="ev-head">
+        <div class="ev-ico-wrap" style="background:rgba(201,148,58,.15)">🪔</div>
+        <div class="ev-head-text">
+          <div class="ev-name">The Wedding ✨</div>
+          <div class="ev-date-tag">29 April 2026 · 10:00 AM onwards</div>
+        </div>
       </div>
       <div class="ev-bd">
-        <span class="ev-ico">🪔</span>
-        <div class="ev-name" style="color:var(--gold);font-size:clamp(1.5rem,4.5vw,2.2rem)">The Wedding</div>
         <div class="ev-rows">
-          <div class="ev-r"><span class="i">🕙</span><strong style="color:var(--ink)">10:00 AM onwards</strong></div>
           <div class="ev-r"><span class="i">📍</span>Venue to be announced</div>
-          <div class="ev-r"><span class="i">👗</span>Traditional / Formal Ethnic</div>
+          <div class="ev-r"><span class="i">👗</span><span class="swatch" style="background:var(--gold2)"></span>Traditional / Formal Ethnic</div>
         </div>
-        <span class="ev-pill" style="border-color:var(--gold);background:rgba(184,134,42,.08)">✨ The Main Ceremony</span>
+      </div>
+      <div class="ev-foot">
+        <span class="ev-pill">The Main Ceremony</span>
+        <a class="ev-cal" href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Yukta+%26+Nikhil+Wedding&dates=20260429T100000/20260429T180000" target="_blank" rel="noopener">📅 Calendar</a>
       </div>
     </div>
 
   </div>
 </section>
 
-<!-- ════════ VENUE ════════ -->
+<!-- ══════════ VENUE ══════════ -->
 <section class="sec v-sec" id="venue">
   <p class="s-tag rev">Find Your Way</p>
   <h2 class="s-title rev">Venues</h2>
   <p class="s-sub rev">Exact addresses will be shared closer to each event</p>
-  <div class="orn rev">
-    <div class="orn-l"></div><span class="orn-s">✦</span><div class="orn-l r"></div>
-  </div>
-
+  <div class="orn rev"><div class="orn-l"></div><span class="orn-s">✦</span><div class="orn-l r"></div></div>
   <div class="v-grid">
     <div class="vc">
       <div class="v-map">📍<small>Map coming soon</small></div>
-      <div class="v-body">
-        <div class="v-etag">💍 Engagement — 30 March</div>
-        <div class="v-name">Venue to be announced</div>
-        <div class="v-addr">Address, City, State<br/>Landmark / Directions here</div>
-        <a href="#" class="v-btn">Get Directions</a>
-      </div>
+      <div class="v-body"><div class="v-etag">💍 Engagement — 30 March</div><div class="v-name">Venue to be announced</div><div class="v-addr">Address, City, State<br/>Landmark / Directions here</div><a href="#" class="v-btn">Get Directions</a></div>
     </div>
-
     <div class="vc">
-      <div class="v-map" style="background:linear-gradient(135deg,#eef5ee,#daeeda);">📍<small>Map coming soon</small></div>
-      <div class="v-body">
-        <div class="v-etag">🌿 Mehendi — 27 Apr &nbsp;|&nbsp; 🌼 Haldi + 🎶 Sangeet — 28 Apr</div>
-        <div class="v-name">Venue to be announced</div>
-        <div class="v-addr">Address, City, State<br/>Landmark / Directions here</div>
-        <a href="#" class="v-btn">Get Directions</a>
-      </div>
+      <div class="v-map" style="background:linear-gradient(135deg,#eef5ee,#daeeda)">📍<small>Map coming soon</small></div>
+      <div class="v-body"><div class="v-etag">🌿 Mehendi — 27 Apr &nbsp;|&nbsp; 🌼 Haldi + 🎶 Sangeet — 28 Apr</div><div class="v-name">Venue to be announced</div><div class="v-addr">Address, City, State<br/>Landmark / Directions here</div><a href="#" class="v-btn">Get Directions</a></div>
     </div>
-
     <div class="vc">
-      <div class="v-map" style="background:linear-gradient(135deg,#f8eee6,#f0d8c2);">📍<small>Map coming soon</small></div>
-      <div class="v-body">
-        <div class="v-etag">🪔 Wedding — 29 April</div>
-        <div class="v-name">Venue to be announced</div>
-        <div class="v-addr">Address, City, State<br/>Landmark / Directions here</div>
-        <a href="#" class="v-btn">Get Directions</a>
-      </div>
+      <div class="v-map" style="background:linear-gradient(135deg,#f8eee6,#f0d8c2)">📍<small>Map coming soon</small></div>
+      <div class="v-body"><div class="v-etag">🪔 Wedding — 29 April</div><div class="v-name">Venue to be announced</div><div class="v-addr">Address, City, State<br/>Landmark / Directions here</div><a href="#" class="v-btn">Get Directions</a></div>
     </div>
   </div>
 </section>
 
-<!-- ════════ SHAGUN ════════ -->
+<!-- ══════════ SHAGUN ══════════ -->
 <section class="sec shagun-sec" id="shagun">
   <p class="s-tag rev">Shower Your Blessings</p>
   <h2 class="s-title rev">Digital Shagun 🎁</h2>
   <p class="s-sub rev">Scan the QR or tap Pay to send your love directly</p>
-  <div class="orn rev">
-    <div class="orn-l"></div><span class="orn-s">✦</span><div class="orn-l r"></div>
-  </div>
+  <div class="orn rev"><div class="orn-l"></div><span class="orn-s">✦</span><div class="orn-l r"></div></div>
 
   <div class="sg-cards">
 
     <!-- YUKTA -->
-    <div class="sg-card" id="sg-yukta">
+    <div class="sg-card rev">
       <div class="sg-avatar">👰</div>
       <div class="sg-name">Yukta</div>
       <div class="sg-role">The Bride</div>
-      <div class="sg-qr-wrap">
-        <canvas id="qr-yukta" width="160" height="160"></canvas>
-        <div class="sg-qr-logo">👰</div>
+      <div class="sg-qr-wrap loading" id="wrap-yukta">
+        <div class="sg-qr-logo" id="logo-yukta">👰</div>
       </div>
-      <div class="sg-upi" id="uid-yukta">yuktatelrandhe0@okaxis</div>
-      <a class="sg-pay-btn" id="pay-yukta" href="#">
-        💳 &nbsp; Pay via UPI
-      </a>
-      <div class="sg-apps">
-        <span class="sg-app">GPay</span>
-        <span class="sg-app">PhonePe</span>
-        <span class="sg-app">Paytm</span>
-        <span class="sg-app">BHIM</span>
-      </div>
+      <div class="sg-upi">yuktatelrandhe0@okaxis</div>
+      <a class="sg-pay-btn" id="pay-yukta" href="upi://pay?pa=yuktatelrandhe0%40okaxis&pn=Yukta&cu=INR&tn=Wedding%20Shagun%20With%20Love">💳 &nbsp; Pay via UPI</a>
+      <button class="sg-copy-btn" onclick="copyUPI('yuktatelrandhe0@okaxis', this)">📋 &nbsp; Copy UPI ID</button>
+      <div class="sg-apps"><span class="sg-app">GPay</span><span class="sg-app">PhonePe</span><span class="sg-app">Paytm</span><span class="sg-app">BHIM</span></div>
     </div>
 
     <!-- NIKHIL -->
-    <div class="sg-card" id="sg-nikhil">
+    <div class="sg-card rev">
       <div class="sg-avatar">🤵</div>
       <div class="sg-name">Nikhil</div>
       <div class="sg-role">The Groom</div>
-      <div class="sg-qr-wrap">
-        <canvas id="qr-nikhil" width="160" height="160"></canvas>
-        <div class="sg-qr-logo">🤵</div>
+      <div class="sg-qr-wrap loading" id="wrap-nikhil">
+        <div class="sg-qr-logo" id="logo-nikhil">🤵</div>
       </div>
-      <div class="sg-upi" id="uid-nikhil">8668592044@okaxis</div>
-      <a class="sg-pay-btn" id="pay-nikhil" href="#">
-        💳 &nbsp; Pay via UPI
-      </a>
-      <div class="sg-apps">
-        <span class="sg-app">GPay</span>
-        <span class="sg-app">PhonePe</span>
-        <span class="sg-app">Paytm</span>
-        <span class="sg-app">BHIM</span>
-      </div>
+      <div class="sg-upi">nikhil@upi &nbsp;<em style="opacity:.5;font-size:.65rem">(update me)</em></div>
+      <a class="sg-pay-btn" id="pay-nikhil" href="upi://pay?pa=nikhil%40upi&pn=Nikhil&cu=INR&tn=Wedding%20Shagun%20With%20Love">💳 &nbsp; Pay via UPI</a>
+      <button class="sg-copy-btn" onclick="copyUPI('nikhil@upi', this)">📋 &nbsp; Copy UPI ID</button>
+      <div class="sg-apps"><span class="sg-app">GPay</span><span class="sg-app">PhonePe</span><span class="sg-app">Paytm</span><span class="sg-app">BHIM</span></div>
     </div>
 
   </div>
-
   <p class="sg-note rev">🙏 &nbsp; Your blessings mean the world to us.<br/>Thank you for being part of our journey.</p>
 </section>
 
-<!-- ════════ FOOTER ════════ -->
+<!-- ══════════ FOOTER ══════════ -->
 <footer>
   <span class="ft-diya">🪔</span>
   <div class="ft-names">Yukta &amp; Nikhil</div>
   <div class="ft-hash">#YuktaWeddsNikhil2026</div>
-  <div class="ft-div">
-    <div class="ft-dl"></div><span class="ft-ds">🌸</span><div class="ft-dl"></div>
-  </div>
+  <div class="ft-div"><div class="ft-dl"></div><span class="ft-ds">🌸</span><div class="ft-dl"></div></div>
   <div class="ft-fam">
-    With the blessings of both families<br/>
-    <span style="font-size:.7rem;opacity:.45;">Bride's Family &nbsp;✦&nbsp; Groom's Family</span>
+    Son of Mr. &amp; Mrs. [Groom's Family Name]<br/>
+    Daughter of Mr. &amp; Mrs. [Bride's Family Name]<br/>
+    <span style="font-size:.7rem;opacity:.45;margin-top:6px;display:block;">With the blessings of both families</span>
   </div>
-  <div class="ft-copy">Made with love &nbsp;💛</div>
+  <div class="ft-copy">Made with love &nbsp;💛 &nbsp;·&nbsp; #YuktaWeddsNikhil2026</div>
 </footer>
 
-<!-- External Libraries -->
-<script src="https://cdn.jsdelivr.net/npm/qrcode/build/qrcode.min.js"></script>
+<script>
+/* ══ PROGRESS BAR ══ */
+window.addEventListener('scroll',()=>{
+  const h=document.documentElement;
+  document.getElementById('progress-bar').style.width=
+    (h.scrollTop/(h.scrollHeight-h.clientHeight)*100)+'%';
+},{passive:true});
 
-<!-- Custom Scripts -->
-<script src="js/main.js" defer></script>
+/* ══ PETALS ══ */
+(function(){
+  const w=document.getElementById('petals');
+  const colors=['#B8862A','#D4A84B','#C8712A','#EDD5B8','#E8A0A0','#F5C842'];
+  const shapes=[
+    (d,c)=>{ d.style.cssText+=`width:${8+Math.random()*8}px;height:${10+Math.random()*12}px;background:${c};border-radius:60% 0 60% 0;`; },
+    (d,c)=>{ d.style.cssText+=`width:${6+Math.random()*6}px;height:${6+Math.random()*6}px;background:${c};border-radius:50%;`; },
+    (d,c)=>{ d.style.cssText+=`width:${5+Math.random()*4}px;height:${5+Math.random()*4}px;background:${c};transform:rotate(45deg);`; },
+  ];
+  for(let i=0;i<36;i++){
+    const d=document.createElement('div'); d.className='p';
+    const c=colors[~~(Math.random()*colors.length)];
+    d.style.cssText=`left:${Math.random()*100}%;position:absolute;top:-40px;opacity:0;animation-duration:${6+Math.random()*14}s;animation-delay:${Math.random()*18}s;`;
+    shapes[~~(Math.random()*shapes.length)](d,c);
+    w.appendChild(d);
+  }
+})();
 
+/* ══ FIREFLIES ══ */
+(function(){
+  const w=document.getElementById('fireflies');
+  for(let i=0;i<24;i++){
+    const d=document.createElement('div'); d.className='ff';
+    d.style.cssText=`left:${Math.random()*100}%;top:${Math.random()*100}%;animation-duration:${3+Math.random()*5}s;animation-delay:${Math.random()*8}s;--dx:${(Math.random()*50-25).toFixed(0)}px;--dy:${(Math.random()*50-25).toFixed(0)}px;`;
+    w.appendChild(d);
+  }
+})();
+
+/* ══ COIN RAIN ══ */
+(function(){
+  const sec=document.querySelector('.shagun-sec');
+  if(!sec) return;
+  ['🪙','✨','💛','🌟'].forEach((emoji,ei)=>{
+    for(let i=0;i<5;i++){
+      const c=document.createElement('span'); c.className='coin'; c.textContent=emoji;
+      c.style.cssText=`left:${5+Math.random()*90}%;top:-40px;font-size:${.7+Math.random()*.7}rem;animation-duration:${5+Math.random()*8}s;animation-delay:${(ei*2)+Math.random()*6}s;`;
+      sec.appendChild(c);
+    }
+  });
+})();
+
+/* ══ LETTER-BY-LETTER NAMES ══ */
+function animateLetters(id,baseDelay){
+  const el=document.getElementById(id);
+  if(!el) return;
+  const text=el.getAttribute('data-text')||el.textContent;
+  el.innerHTML='';
+  [...text].forEach((ch,i)=>{
+    const sp=document.createElement('span');
+    sp.className='letter';
+    sp.textContent=ch===' '?'\u00A0':ch;
+    sp.style.animationDelay=(baseDelay+i*0.09)+'s';
+    el.appendChild(sp);
+  });
+}
+animateLetters('name-yukta',0.5);
+animateLetters('name-nikhil',1.0);
+
+/* ══ COUNTDOWN ══ */
+(function(){
+  const target=new Date('2026-04-29T10:00:00');
+  const ids=['cd-d','cd-h','cd-m','cd-s'];
+
+  function showCelebration(){
+    document.getElementById('cdWrap').innerHTML=
+      `<div style="text-align:center">
+        <div style="font-size:2.8rem;margin-bottom:10px">🎊🪔🎊</div>
+        <div style="font-family:'IM Fell English',serif;font-size:clamp(1rem,3vw,1.4rem);color:var(--gold2);font-style:italic;letter-spacing:2px">We are Married!</div>
+        <div style="font-family:'Raleway',sans-serif;font-size:.6rem;letter-spacing:3px;text-transform:uppercase;color:rgba(237,213,184,.5);margin-top:8px">29 April 2026 · Forever begins 🌸</div>
+      </div>`;
+  }
+
+  function tick(){
+    const diff=target-Date.now();
+    if(diff<=0){ showCelebration(); return; }
+    document.getElementById('cd-d').textContent=String(~~(diff/864e5)).padStart(2,'0');
+    document.getElementById('cd-h').textContent=String(~~(diff%864e5/36e5)).padStart(2,'0');
+    document.getElementById('cd-m').textContent=String(~~(diff%36e5/6e4)).padStart(2,'0');
+    document.getElementById('cd-s').textContent=String(~~(diff%6e4/1e3)).padStart(2,'0');
+  }
+  tick();
+  setInterval(tick,1000);
+})();
+
+/* ══ SCROLL REVEAL ══ */
+const io=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('vis'); } });
+},{threshold:.1});
+document.querySelectorAll('.rev,.ev,.vc').forEach(el=>io.observe(el));
+document.querySelectorAll('.ev').forEach((el,i)=>{ el.style.transitionDelay=(i*.1)+'s'; });
+document.querySelectorAll('.vc').forEach((el,i)=>{ el.style.transitionDelay=(i*.1)+'s'; });
+
+/* ══ QR CODES — using new QRCode() constructor (correct API) ══ */
+(function(){
+  const upiData={
+    yukta: { id:'yuktatelrandhe0@okaxis', name:'Yukta',  wrap:'wrap-yukta',  logo:'logo-yukta'  },
+    nikhil:{ id:'nikhil@upi',             name:'Nikhil', wrap:'wrap-nikhil', logo:'logo-nikhil' }
+  };
+
+  function makeUPIUrl(id,name){
+    return 'upi://pay?pa='+encodeURIComponent(id)+'&pn='+encodeURIComponent(name)+'&cu=INR&tn='+encodeURIComponent('Wedding Shagun - With Love!');
+  }
+
+  function generateQR(key){
+    const cfg=upiData[key];
+    const wrapEl=document.getElementById(cfg.wrap);
+    const logoEl=document.getElementById(cfg.logo);
+    const url=makeUPIUrl(cfg.id,cfg.name);
+
+    // also update pay button href with fully encoded URL
+    const payBtn=document.getElementById('pay-'+key);
+    if(payBtn) payBtn.href=url;
+
+    // remove loading state
+    wrapEl.classList.remove('loading');
+
+    // create a div for QRCode lib to render into
+    const qrDiv=document.createElement('div');
+    wrapEl.insertBefore(qrDiv,logoEl);
+
+    try {
+      new QRCode(qrDiv,{
+        text: url,
+        width: 160,
+        height: 160,
+        colorDark: '#3A0A12',
+        colorLight: '#ffffff',
+        correctLevel: QRCode.CorrectLevel.M
+      });
+      // move logo on top after QR renders
+      setTimeout(()=>{ wrapEl.appendChild(logoEl); },100);
+    } catch(e){
+      wrapEl.classList.add('error');
+      console.error('QR generation failed for',key,e);
+    }
+  }
+
+  // QRCode.js is already loaded in <head>, generate immediately on DOM ready
+  if(document.readyState==='loading'){
+    document.addEventListener('DOMContentLoaded',()=>{ generateQR('yukta'); generateQR('nikhil'); });
+  } else {
+    generateQR('yukta');
+    generateQR('nikhil');
+  }
+})();
+
+/* ══ COPY UPI ID ══ */
+function copyUPI(upiId, btn){
+  navigator.clipboard.writeText(upiId).then(()=>{
+    btn.textContent='✅  Copied!';
+    btn.classList.add('copied');
+    setTimeout(()=>{ btn.textContent='📋 \u00A0 Copy UPI ID'; btn.classList.remove('copied'); },2500);
+  }).catch(()=>{
+    // fallback for older browsers
+    const el=document.createElement('textarea');
+    el.value=upiId; document.body.appendChild(el);
+    el.select(); document.execCommand('copy');
+    document.body.removeChild(el);
+    btn.textContent='✅  Copied!'; btn.classList.add('copied');
+    setTimeout(()=>{ btn.textContent='📋 \u00A0 Copy UPI ID'; btn.classList.remove('copied'); },2500);
+  });
+}
+</script>
 </body>
 </html>
