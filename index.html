@@ -458,14 +458,43 @@ footer { background:#0E0205; text-align:center; padding:clamp(40px,8vw,68px) 24p
 .ft-fam { font-size:.85rem; color:rgba(150,100,74,.65); font-style:italic; line-height:2.2; }
 .ft-copy { margin-top:24px; font-family:'Raleway',sans-serif; font-size:.6rem; color:rgba(150,100,74,.28); letter-spacing:1px; }
 
+.ft-made {
+  margin-top:20px;
+  display:flex; justify-content:center;
+}
+.ft-made-inner {
+  display:inline-flex; align-items:center; gap:8px; flex-wrap:wrap; justify-content:center;
+  background:rgba(184,134,42,.07);
+  border:1px solid rgba(184,134,42,.2);
+  border-radius:40px;
+  padding:10px 22px;
+  font-family:'Cormorant Garamond',serif;
+  font-size:.95rem; font-style:italic;
+  color:rgba(150,100,74,.6);
+  line-height:1.6;
+}
+.ft-made-inner strong {
+  color:var(--gold2);
+  font-style:normal;
+  font-weight:600;
+  font-family:'IM Fell English',serif;
+  font-size:1rem;
+}
+.ft-made-inner em {
+  font-size:.78rem;
+  color:rgba(150,100,74,.45);
+  letter-spacing:.5px;
+}
+
 
 
 /* ── MOBILE ── */
-@media(max-width:540px){
+@media(max-width:600px){
+  .ev-grid { grid-template-columns:1fr; }
+  .ev-grid .ev.wedding-card { max-width:100%; }
   .sg-cards { grid-template-columns:1fr; gap:20px; }
-  .timeline::before { left:20px; }
-  .ev { grid-template-columns:46px 1fr; gap:10px; }
-  .ev-dc::after { right:-9px; }
+  .h-cd { gap:8px; }
+  .cd-n { width:54px; height:54px; font-size:1.7rem; }
 }
 </style>
 </head>
@@ -584,7 +613,7 @@ footer { background:#0E0205; text-align:center; padding:clamp(40px,8vw,68px) 24p
       <div class="ev-bd">
         <div class="ev-rows">
           <div class="ev-r"><span class="i">🕐</span>Time to be announced</div>
-          <div class="ev-r"><span class="i">📍</span>Venue to be announced</div>
+          <div class="ev-r"><span class="i">📍</span><a href="https://maps.app.goo.gl/qbZzWRzTf7nQDLdZA" target="_blank" rel="noopener" style="color:var(--gold);text-decoration:none;">Golden Leaf Banquet, Trimurti Nagar</a></div>
           <div class="ev-r"><span class="i">👗</span><span class="swatch" style="background:#C9473A"></span>Traditional / Semi-formal</div>
         </div>
       </div>
@@ -606,7 +635,7 @@ footer { background:#0E0205; text-align:center; padding:clamp(40px,8vw,68px) 24p
       </div>
       <div class="ev-bd">
         <div class="ev-rows">
-          <div class="ev-r"><span class="i">📍</span>Venue to be announced</div>
+          <div class="ev-r"><span class="i">📍</span><a href="https://maps.app.goo.gl/c2i7WDmsuF9K8EKe8" target="_blank" rel="noopener" style="color:var(--gold);text-decoration:none;">Good Luck Society, Yashoda Nagar, Nagpur</a></div>
           <div class="ev-r"><span class="i">👗</span><span class="swatch" style="background:#E07B39"></span>Colourful Ethnic Wear</div>
         </div>
       </div>
@@ -628,7 +657,7 @@ footer { background:#0E0205; text-align:center; padding:clamp(40px,8vw,68px) 24p
       </div>
       <div class="ev-bd">
         <div class="ev-rows">
-          <div class="ev-r"><span class="i">📍</span>Venue to be announced</div>
+          <div class="ev-r"><span class="i">📍</span><a href="https://maps.app.goo.gl/c2i7WDmsuF9K8EKe8" target="_blank" rel="noopener" style="color:var(--gold);text-decoration:none;">Good Luck Society, Yashoda Nagar, Nagpur</a></div>
           <div class="ev-r"><span class="i">👗</span><span class="swatch" style="background:#F5D020"></span>Yellow / White Ethnic</div>
         </div>
       </div>
@@ -650,7 +679,7 @@ footer { background:#0E0205; text-align:center; padding:clamp(40px,8vw,68px) 24p
       </div>
       <div class="ev-bd">
         <div class="ev-rows">
-          <div class="ev-r"><span class="i">📍</span>Venue to be announced</div>
+          <div class="ev-r"><span class="i">📍</span><a href="https://maps.app.goo.gl/Cq9yfrX4JNWrFNk87" target="_blank" rel="noopener" style="color:var(--gold);text-decoration:none;">Shree Bhagwati Park, Nagpur</a></div>
           <div class="ev-r"><span class="i">👗</span><span class="swatch" style="background:#9B59B6"></span>Festive / Party Wear</div>
         </div>
       </div>
@@ -672,7 +701,7 @@ footer { background:#0E0205; text-align:center; padding:clamp(40px,8vw,68px) 24p
       </div>
       <div class="ev-bd">
         <div class="ev-rows">
-          <div class="ev-r"><span class="i">📍</span>Venue to be announced</div>
+          <div class="ev-r"><span class="i">📍</span><a href="https://maps.app.goo.gl/Cq9yfrX4JNWrFNk87" target="_blank" rel="noopener" style="color:var(--gold2);text-decoration:none;">Shree Bhagwati Park, Nagpur</a></div>
           <div class="ev-r"><span class="i">👗</span><span class="swatch" style="background:var(--gold2)"></span>Traditional / Formal Ethnic</div>
         </div>
       </div>
@@ -689,21 +718,54 @@ footer { background:#0E0205; text-align:center; padding:clamp(40px,8vw,68px) 24p
 <section class="sec v-sec" id="venue">
   <p class="s-tag rev">Find Your Way</p>
   <h2 class="s-title rev">Venues</h2>
-  <p class="s-sub rev">Exact addresses will be shared closer to each event</p>
+  <p class="s-sub rev">Tap "Get Directions" to open Google Maps</p>
   <div class="orn rev"><div class="orn-l"></div><span class="orn-s">✦</span><div class="orn-l r"></div></div>
   <div class="v-grid">
+
+    <!-- Engagement -->
     <div class="vc">
-      <div class="v-map">📍<small>Map coming soon</small></div>
-      <div class="v-body"><div class="v-etag">💍 Engagement — 30 March</div><div class="v-name">Venue to be announced</div><div class="v-addr">Address, City, State<br/>Landmark / Directions here</div><a href="#" class="v-btn">Get Directions</a></div>
+      <div class="v-map" style="background:linear-gradient(135deg,#f8eee6,#f0d8c2)">📍<small>Trimurti Nagar, Nagpur</small></div>
+      <div class="v-body">
+        <div class="v-etag">💍 Engagement — 30 March 2026</div>
+        <div class="v-name">Golden Leaf Banquet</div>
+        <div class="v-addr">
+          21, Adarsh Colony, Subhash Nagar<br/>
+          Trimurti Nagar, Nagpur — 440022<br/>
+          Maharashtra
+        </div>
+        <a href="https://maps.app.goo.gl/qbZzWRzTf7nQDLdZA" target="_blank" rel="noopener" class="v-btn">📍 Get Directions</a>
+      </div>
     </div>
+
+    <!-- Mehendi & Haldi -->
     <div class="vc">
-      <div class="v-map" style="background:linear-gradient(135deg,#eef5ee,#daeeda)">📍<small>Map coming soon</small></div>
-      <div class="v-body"><div class="v-etag">🌿 Mehendi — 27 Apr &nbsp;|&nbsp; 🌼 Haldi + 🎶 Sangeet — 28 Apr</div><div class="v-name">Venue to be announced</div><div class="v-addr">Address, City, State<br/>Landmark / Directions here</div><a href="#" class="v-btn">Get Directions</a></div>
+      <div class="v-map" style="background:linear-gradient(135deg,#eef5ee,#daeeda)">🏠<small>Yashoda Nagar, Nagpur</small></div>
+      <div class="v-body">
+        <div class="v-etag">🌿 Mehendi — 27 Apr &nbsp;|&nbsp; 🌼 Haldi — 28 Apr</div>
+        <div class="v-name">Bride's Home</div>
+        <div class="v-addr">
+          27, Good Luck Society<br/>
+          Yashoda Nagar, Jaitala<br/>
+          Nagpur — 440036, Maharashtra
+        </div>
+        <a href="https://maps.app.goo.gl/c2i7WDmsuF9K8EKe8" target="_blank" rel="noopener" class="v-btn">📍 Get Directions</a>
+      </div>
     </div>
+
+    <!-- Sangeet & Wedding -->
     <div class="vc">
-      <div class="v-map" style="background:linear-gradient(135deg,#f8eee6,#f0d8c2)">📍<small>Map coming soon</small></div>
-      <div class="v-body"><div class="v-etag">🪔 Wedding — 29 April</div><div class="v-name">Venue to be announced</div><div class="v-addr">Address, City, State<br/>Landmark / Directions here</div><a href="#" class="v-btn">Get Directions</a></div>
+      <div class="v-map" style="background:linear-gradient(135deg,#FDF0F3,#f5dce0)">📍<small>Nagpur, Maharashtra</small></div>
+      <div class="v-body">
+        <div class="v-etag">🎶 Sangeet — 28 Apr &nbsp;|&nbsp; 🪔 Wedding — 29 Apr</div>
+        <div class="v-name">Shree Bhagwati Park</div>
+        <div class="v-addr">
+          Nagpur, Maharashtra<br/>
+          <span style="font-size:.72rem;color:var(--gold);font-style:italic;">Weddingz.in Partner Venue</span>
+        </div>
+        <a href="https://maps.app.goo.gl/Cq9yfrX4JNWrFNk87" target="_blank" rel="noopener" class="v-btn">📍 Get Directions</a>
+      </div>
     </div>
+
   </div>
 </section>
 
@@ -738,7 +800,7 @@ footer { background:#0E0205; text-align:center; padding:clamp(40px,8vw,68px) 24p
       <div class="sg-qr-wrap loading" id="wrap-nikhil">
         <div class="sg-qr-logo" id="logo-nikhil">🤵</div>
       </div>
-      <div class="sg-upi">nikhil@upi &nbsp;<em style="opacity:.5;font-size:.65rem">(update me)</em></div>
+      <div class="sg-upi" id="uid-nikhil">nikhil@upi</div>
       <a class="sg-pay-btn" id="pay-nikhil" href="upi://pay?pa=nikhil%40upi&pn=Nikhil&cu=INR&tn=Wedding%20Shagun%20With%20Love">💳 &nbsp; Pay via UPI</a>
       <button class="sg-copy-btn" onclick="copyUPI('nikhil@upi', this)">📋 &nbsp; Copy UPI ID</button>
       <div class="sg-apps"><span class="sg-app">GPay</span><span class="sg-app">PhonePe</span><span class="sg-app">Paytm</span><span class="sg-app">BHIM</span></div>
@@ -755,11 +817,20 @@ footer { background:#0E0205; text-align:center; padding:clamp(40px,8vw,68px) 24p
   <div class="ft-hash">#YuktaWeddsNikhil2026</div>
   <div class="ft-div"><div class="ft-dl"></div><span class="ft-ds">🌸</span><div class="ft-dl"></div></div>
   <div class="ft-fam">
-    Son of Mr. &amp; Mrs. [Groom's Family Name]<br/>
-    Daughter of Mr. &amp; Mrs. [Bride's Family Name]<br/>
+    <span style="color:var(--gold2);font-family:'IM Fell English',serif;font-size:1rem;font-style:italic;">Nikhil</span>
+    &nbsp; Son of Mr. &amp; Mrs. Satpute<br/>
+    <span style="color:var(--gold2);font-family:'IM Fell English',serif;font-size:1rem;font-style:italic;">Yukta</span>
+    &nbsp; Daughter of Mr. &amp; Mrs. Telrandhe<br/>
     <span style="font-size:.7rem;opacity:.45;margin-top:6px;display:block;">With the blessings of both families</span>
   </div>
   <div class="ft-copy">Made with love &nbsp;💛 &nbsp;·&nbsp; #YuktaWeddsNikhil2026</div>
+  <div class="ft-made">
+    <span class="ft-made-inner">
+      🎨 This invitation was crafted with love by
+      <strong>Sushant Telrandhe</strong>
+      <em>— Brother of the Bride</em>
+    </span>
+  </div>
 </footer>
 
 <script>
@@ -831,7 +902,6 @@ animateLetters('name-nikhil',1.0);
 /* ══ COUNTDOWN ══ */
 (function(){
   const target=new Date('2026-04-29T10:00:00');
-  const ids=['cd-d','cd-h','cd-m','cd-s'];
 
   function showCelebration(){
     document.getElementById('cdWrap').innerHTML=
