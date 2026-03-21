@@ -3,13 +3,14 @@ html { scroll-behavior: smooth; }
 
 :root {
   --ink:    #1C0A04;
-  --maroon: #6B1520;
-  --gold:   #B8862A;
-  --gold2:  #D4A84B;
-  --cream:  #FBF4E8;
-  --warm:   #F5EAD5;
-  --blush:  #EDD5B8;
-  --muted:  #96644A;
+  --maroon: #4A0D16;    /* Deeper Royal Maroon */
+  --gold:   #C9943A;    /* Antique Gold */
+  --gold2:  #D4A84B;    /* Shimmering Gold */
+  --cream:  #FFF9F0;    /* Softer Ivory Cream */
+  --warm:   #F9F1E2;    /* Warm Champagne */
+  --blush:  #F5E1D1;    /* Soft Peach Blush */
+  --muted:  #7D5A44;    /* Rich Muted Bronze */
+  --shadow: rgba(74, 13, 22, 0.12);
 }
 
 body {
@@ -17,6 +18,7 @@ body {
   color: var(--ink);
   font-family: 'Cormorant Garamond', serif;
   overflow-x: hidden;
+  line-height: 1.6;
 }
 
 /* noise grain */
@@ -173,6 +175,17 @@ body::after {
 }
 @keyframes bob { 0%,100%{transform:translateY(0)} 50%{transform:translateY(8px)} }
 @keyframes up  { from{opacity:0;transform:translateY(26px)} to{opacity:1;transform:translateY(0)} }
+
+/* ── MATCH TEXT REPLACEMENT ── */
+.match-text {
+  font-family: 'IM Fell English', serif;
+  font-size: clamp(1.8rem, 6vw, 3.2rem);
+  color: var(--gold2);
+  font-style: italic;
+  text-shadow: 0 0 20px rgba(212, 168, 75, 0.3);
+  animation: up 1.4s cubic-bezier(.22,1,.36,1) both;
+  margin-top: 20px;
+}
 
 /* ════════════════ SHARED ════════════════ */
 .sec { padding:clamp(64px,10vw,108px) clamp(20px,5vw,60px); }

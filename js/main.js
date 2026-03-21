@@ -40,7 +40,7 @@
 
 /* ── COUNTDOWN TIMER ── */
 (function initCountdown() {
-  const targetDate = new Date('2025-04-29T10:00:00');
+  const targetDate = new Date('2026-04-29T10:00:00');
   const elements = {
     d: document.getElementById('cd-d'),
     h: document.getElementById('cd-h'),
@@ -55,7 +55,10 @@
     const diff = targetDate - now;
 
     if (diff <= 0) {
-      Object.values(elements).forEach(el => el.textContent = '🎊');
+      const timer = document.getElementById('countdown-timer');
+      if (timer && !timer.classList.contains('hidden')) {
+        timer.innerHTML = '<div class="match-text">A Match Made in Heaven</div>';
+      }
       return;
     }
 
@@ -73,6 +76,32 @@
   update();
   setInterval(update, 1000);
 })();
+
+/* ── INTERACTIVE CELEBRATION ── */
+function celebrate() {
+  const container = document.getElementById('petals');
+  const colors = ['#B8862A', '#D4A84B', '#6B1520', '#EDD5B8', '#C8712A'];
+  
+  for (let i = 0; i < 30; i++) {
+    const p = document.createElement('div');
+    p.className = 'p';
+    p.textContent = ['🌸', '✨', '🌼'][Math.floor(Math.random() * 3)];
+    
+    const left = Math.random() * 100;
+    const duration = 3 + Math.random() * 5;
+    const size = 20 + Math.random() * 20;
+
+    p.style.cssText = `
+      left: ${left}%;
+      font-size: ${size}px;
+      animation: fall ${duration}s linear forwards;
+      z-index: 10001;
+    `;
+    
+    container.appendChild(p);
+    setTimeout(() => p.remove(), duration * 1000);
+  }
+}
 
 /* ── SCROLL REVEAL (Intersection Observer) ── */
 (function initReveal() {
